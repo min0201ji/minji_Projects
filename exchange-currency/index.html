@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <!-- 첫번째 박스 -->
+      <!-- 첫번째 박스: 소유한 돈 -->
     <div class = 'exchange-box'>
       <div class="dropdown">
-        <button class="dropbtn">USD</button>
-        <div class="dropdown-content">
+        <button class="dropbtn" id= 'from-button'>USD</button>
+        <div class="dropdown-content" id='from-currency-list'>
           <a href="#">USD</a>
           <a href="#">KRW</a>
           <a href="#">JPY</a>
@@ -27,11 +27,11 @@
     <!-- 박스 사이의 공간 -->
     <h1> = </h1>
 
-    <!-- 두번째 박스 -->
+    <!-- 두번째 박스: 바꾸고 싶은 돈 -->
     <div class = 'exchange-box'>
         <div class="dropdown">
-          <button class="dropbtn">USD</button>
-          <div class="dropdown-content">
+          <button class="dropbtn" id='to-button'>USD</button>
+          <div class="dropdown-content" id = 'to-currency-list'>
             <a href="#">USD</a>
             <a href="#">KRW</a>
             <a href="#">JPY</a>

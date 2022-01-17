@@ -50,6 +50,8 @@ document.querySelectorAll("#from-currency-list a").forEach((menu) =>
     document.getElementById("from-button").textContent = this.textContent;
     // 3. 선택된 환율값을 변수에 저장
     fromCurrency = this.textContent;
+    // list값 변경시 값 초기화
+    convert()
   })
 );
 
@@ -57,5 +59,16 @@ document.querySelectorAll("#to-currency-list a").forEach((menu) =>
   menu.addEventListener("click", function () {
     document.getElementById("to-button").textContent = this.textContent;
     toCurrency = this.textContent;
+    // list값 변경시 값 초기화
+    convert()
   })
 );
+
+// 키 입력 => 환전 => 결과값 보여주기
+function convert(){
+  let amount = document.getElementById('from-input').value
+  // value : input태그 안에 입력한 값을 들고 오고 싶을때 사용
+  let convertedAmount = amount * currencyRatio[fromCurrency][toCurrency]
+  // 동적인 값을 위해서 []변수 사용
+  document.getElementById('to-input').value = convertedAmount
+}
